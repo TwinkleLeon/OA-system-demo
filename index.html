@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="" href="js/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/assets/uploadify/uploadify.css">
+    <link rel="stylesheet" href="js/assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box container-fluid">
+        <div class="row">
+            <div class="leftNav">
+                <div class="top">
+                    <div class="icon">
+                        <img class="img-responsive img-circle" src="imgs/icon2.gif" alt="">
+                        <img id="icon" class="img-responsive img-circle" src="imgs/icon.png" alt="">
+                    </div>
+                    <div class="name">么么大 </div>
+                </div>
+                <div class="bot">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li id="btnTeacherManage" role="presentation"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>讲师管理</a></li>
+                        <li id="btnClassManage" role="presentation"><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>课程管理</a></li>
+                        <li role="presentation" id="ClassManageList" style="display:none">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li id="btnClassTimeManage" role="presentation"><a href="#"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>课时管理</a></li>
+                                <li id="btnClassAddManage" role="presentation"><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>课程添加</a></li>
+                            </ul>
+                        </li>
+                        <li id="btnClassCategory" role="presentation"><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>课程分类</a></li>
+                        <li id="btnChartManage" role="presentation"><a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>图表统计</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightContent">
+                <div class="right_topNav">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <a href="#">
+                                <span class="navBtn glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;个人中心</a></li>
+                            <li id="logOut"><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;退出</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="showPart">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/lib/require.js" data-main="./main"></script>
+
+</html>

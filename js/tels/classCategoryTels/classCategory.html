@@ -1,0 +1,45 @@
+<div class="container col-md-10 col-md-offset-1">
+    <ol class="panel breadcrumb">
+        <li><a href="#">课程分类</a></li>
+        <li>课程分类列表</li>
+    </ol>
+    <div class="panel-Body">
+        <div class="btnAdd btn btn-success pull-right">添加列表</div>
+    </div>
+    <table class="table  table-bordered text-center col-md-5">
+        <thead>
+            <th class="text-center">课程名称</th>
+            <th class="text-center">课程数量</th>
+            <th class="text-center">是否显示</th>
+            <th class="text-center">排序</th>
+            <th class="text-center">操作</th>
+        </thead>
+        <tbody>
+            {{each result valueFirst}} {{if valueFirst.cg_pid == 0}}
+            <tr class="warning">
+                <td>{{valueFirst.cg_name}}</td>
+                <td>{{valueFirst.total}}</td>
+                <td>
+                    {{if valueFirst.cg_is_hide == 1}} 是 {{else}} 否 {{/if}}
+                </td>
+                <td>{{valueFirst.cg_order}}</td>
+                <td>
+                    <button data-id="{{valueFirst.cg_id}}"  class="btnEdit btn btn-primary btn-xs">编辑</button>
+                </td>
+            </tr>
+            {{each result valueSecond}} {{if valueSecond.cg_pid == valueFirst.cg_id}}
+            <tr class="success">
+                <td>{{valueSecond.cg_name}}</td>
+                <td>{{valueSecond.total}}</td>
+                <td>
+                    {{if valueSecond.cg_is_hide == 1}} 是 {{else}} 否 {{/if}}
+                </td>
+                <td>{{valueSecond.cg_order}}</td>
+                <td>
+                    <button data-id="{{valueSecond.cg_id}}" class="btnEdit btn btn-primary btn-xs">编辑</button>
+                </td>
+            </tr>
+            {{/if}} {{/each}} {{/if}} {{/each}}
+        </tbody>
+    </table>
+</div>

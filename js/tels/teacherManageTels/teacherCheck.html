@@ -1,0 +1,64 @@
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">讲师信息</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th>姓名:</th>
+                                    <td>{{x.tc_name}}</td>
+                                    <th>职位:</th>
+                                    <td colspan="3">讲师</td>
+                                    <td rowspan="4" width="128">
+                                        <div class="avatar">
+                                            <img src="{{x.tc_avatar}}" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>花名:</th>
+                                    <td>{{x.tc_roster}}</td>
+                                    <th>出生日期:</th>
+                                    <td colspan="3">{{x.tc_birthday}}</td>
+                                </tr>
+                                <tr>
+                                    <th>性别:</th>
+                                    {{if x.tc_gender == 1}}
+                                    <td>男</td>
+                                    {{else}}
+                                    <td>女</td>
+                                    {{/if}}
+                                    <th>入坑日期:</th>
+                                    <td colspan="3">{{x.tc_join_date}}</td>
+                                </tr>
+                                <tr>
+                                    <th>手机号码:</th>
+                                    <td colspan="2">{{x.tc_cellphone}}</td>
+                                    <th>邮箱:</th>
+                                    <td colspan="2">{{x.tc_email}}</td>
+                                </tr>
+                                <tr>
+                                    <th>籍贯:</th>
+                                    <td colspan="6">{{x.tc_hometown}}</td>
+                                </tr>
+                                <tr>
+                                    <th>讲师描述</th>
+                                    <td colspan="7">
+                                        <div class="introduce">
+                                            {{x.tc_introduce}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

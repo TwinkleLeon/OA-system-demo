@@ -1,0 +1,17 @@
+<div class="classPicBox">
+    <div class="page-header">
+        <h1><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;课程图片<small>COURSE ICON</small></h1>
+    </div>
+    <div class="picBody text-center">
+        <div class="imgBox">
+            {{if x.cs_cover_original == ""}}
+            <img src="../imgs/course.png" alt=""> {{else}}
+            <img src="{{x.cs_cover_original}}" alt=""> {{/if}}
+        </div>
+        <p>可上传jpg, gif, png格式文件, 图片建议尺寸大于300x150，文件大小不能超过2M。</p>
+        <form class="form text-center">
+            <input id="picFile" type="file" class="col-xs-5 col-xs-offset-1" name="cs_cover_original">
+        </form>
+        <div class="btn btn-success pull-right jumb">跳过</div>
+    </div>
+</div>

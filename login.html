@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="" href="js/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="" href="css/login.css">
+    <script src="js/lib/jquery-3.1.1.min.js"></script>
+    <script src="js/lib/jquery.cookie.js"></script>
+    <script src="js/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="login container">
+        <h3 class="text-center">剥削谷管理系统</h3>
+        <form class="form form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label" >用户名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="userName form-control" id="inputEmail3" placeholder="请输入用户名" name="tc_name" value="前端学院" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label" >密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class=" userPas form-control" id="inputPassword3" placeholder="请输入密码" name="tc_pass" value="123456" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success btn-block">登陆</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

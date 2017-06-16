@@ -1,0 +1,18 @@
+<table class="table  text-center table-hover col-md-5">
+   <thead>
+        <th class="text-center">编号</th>
+        <th class="text-center">名称</th>
+        <th class="text-center">时长</th>
+        <th class="text-center">操作</th>
+   </thead>
+   <tbody>
+       {{each x.lessons}}
+       <tr>
+           <td>{{$value.ct_id}}</td>
+           <td>{{$value.ct_name}}</td>
+           <td>{{$value.ct_video_duration}}</td>
+           <td><button class="btn btn-success" data-id="{{$value.ct_id}}">编辑</button></td>
+       </tr>
+       {{/each}}
+   </tbody>
+</table>
