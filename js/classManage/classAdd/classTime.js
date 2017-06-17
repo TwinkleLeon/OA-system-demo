@@ -8,7 +8,7 @@ define(["text!tels/classManageTels/classAdd/classTime.html", "text!tels/classMan
         $(classInfoTpl).on("click", ".addClass", function () {
             $(str).on("submit", "form", function () {
                 API.getClassSub($(this).serialize(), function (x) {
-                    console.log(x);
+                    console.log(x); 
                 });
                 $(".modal.fade").modal("hide");
                 classTimeRender(API, template, cs_id);

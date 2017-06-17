@@ -1,7 +1,7 @@
 <div class="teacherListBox panel panel-default">
     <div class="panel-heading">教师列表</div>
     <div class="panel-body">
-        <input type="search" name="" placeholder="请输入教师编号"><input type="button" value="搜索" class="btn btn-info" >
+        <input type="search" name="" placeholder="请输入教师编号" class="searchPart"><input type="button" value="搜索" class="btn btn-info searchBtn" >
         <input  value="添加讲师" class="btn btn-primary col-sm-2 pull-right btnAdd">
     </div>
 
@@ -16,7 +16,7 @@
         </thead>
         <tbody class="text-center">
             {{each x}}
-            <tr>
+            <tr dataid="{{$value.tc_id}}">
                 <td>{{$value.tc_id}}</td>
                 <td>{{$value.tc_name}}</td>
                 <td>{{$value.tc_roster}}</td>

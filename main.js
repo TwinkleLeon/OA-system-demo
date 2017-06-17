@@ -10,7 +10,9 @@ require.config({
         tmp: "lib/template-web",
         bsJs: "assets/bootstrap-3.3.7-dist/js/bootstrap.min",
         bsTimeJs: "assets/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min",
-        bsTimelang: "assets/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN"
+        bsTimelang: "assets/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN",
+        ueditAll:"lib/utf8/ueditor.all.min",
+        ueditCfg:"lib/utf8/ueditor.config"
     },
     shim: {
         log: {
@@ -28,7 +30,7 @@ require.config({
 
     },
 });
-require(["bsJs", "bsTimeJs", "bsTimelang", "text!tels/ChartManageTel.html", "tmp", "classCategory/list", "classManage/classList", "classManage/classEdit", "classManage/classChange", "classManage/classAdd/classCreate", "teacherManage/teacherList", "common/API", "common/load", "jqCheck", "jqLogOut"], function (a, b, c, ChartManageTel, template, list, classManageList, classManageEdit, classManageChange, classCreate, teacherList, API, load) {
+require(["bsJs", "bsTimeJs", "bsTimelang", "text!tels/ChartManageTel.html", "tmp", "classCategory/list", "classManage/classList", "classManage/classEdit", "classManage/classChange", "classManage/classAdd/classCreate", "teacherManage/teacherList", "common/userCenter","common/API", "common/load", "jqCheck", "jqLogOut"], function (a, b, c, ChartManageTel, template, list, classManageList, classManageEdit, classManageChange, classCreate, teacherList,userCenter, API, load) {
     var currentTime;
     var durationTime = 1001;
     // $.ajaxSetup({
@@ -80,4 +82,11 @@ require(["bsJs", "bsTimeJs", "bsTimelang", "text!tels/ChartManageTel.html", "tmp
         $(this).siblings().removeClass("active").end().addClass("active");
         $(".showPart").append(ChartManageTel);
     });
+
+
+
+    //个人中心
+    $("#btnUserCenter").on("click",function(){
+        userCenter(API, template);
+    })
 })

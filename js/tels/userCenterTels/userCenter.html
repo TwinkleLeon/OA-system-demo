@@ -1,0 +1,135 @@
+
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">个人中心</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">讲师ID</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_id" value="{{x.tc_id}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">讲师头像</label>
+                        <div class="col-sm-10">
+                            <div class="imgBox col-sm-8">
+                                {{if x.tc_avatar == ""}}
+                                <img src="../imgs/course.png" alt=""> {{else}}
+                                <img src="{{x.tc_avatar}}" alt=""> {{/if}}
+                            </div>
+                            <div class="col-sm-4">
+                                <input id="picFile" type="file" name="tc_avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">讲师名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_name" value="{{x.tc_name}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10">
+                            <div class="radio">
+                                {{if x.tc_gender == 0}}
+                                <label>
+                                    <input type="radio" value="0" name="tc_gender" checked>男
+                                 </label>
+                                <label>
+                                    <input type="radio" value="1" name="tc_gender">女
+                                </label> {{else}}
+                                <label>
+                                    <input type="radio" value="0" name="tc_gender">男
+                                 </label>
+                                <label>
+                                    <input type="radio" value="1" name="tc_gender" checked>女
+                                </label> {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">讲师花号</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_roster" value="{{x.tc_roster}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">出生年月</label>
+                        <div class="col-sm-10 input-append date form_datetime">
+                            <input class="birthSet col-sm-12 form-control" type="text" value="{{x.tc_birthday}}" readonly name="tc_birthday">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">省份:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_province" value="{{x.tc_province}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">市:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_city" value="{{x.tc_city}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">区/县:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_district" value="{{x.tc_district}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">哪个旮沓:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_hometown" value="{{x.tc_hometown}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">联系方式:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="tc_cellphone" value="{{x.tc_cellphone}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">邮箱:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" name="tc_email" value="{{x.tc_email}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">入职时间</label>
+                        <div class="col-sm-10">
+                            <input class="col-sm-12 form-control" type="text" value="{{x.tc_join_date}}" disabled>
+                            <input class="col-sm-12 form-control" type="hidden" value="{{x.tc_join_date}}" name="tc_join_date">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">简介:</label>
+                        <div class="col-sm-10">
+                            <script id="container" name="tc_introduce" type="text/plain" width="100" height="50"></script>
+                            <script>
+                                var ue = UE.getEditor('container');
+                                ue.ready(function () {
+                                    ue.setContent('{{x.tc_introduce}}');
+                                    var txt = ue.getContentTxt();
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

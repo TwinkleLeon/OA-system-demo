@@ -233,5 +233,29 @@ define(["jq"], function () {
                 };
             });
         },
+        //个人中心
+        getUserMessage:function(callback){
+             $.get("/api/teacher/profile",function (x) {
+                if (x.code != 200) {
+                    console.log(x.msg);
+                    return;
+                };
+                if (typeof callback == "function") {
+                    callback(x.result);
+                };
+            });
+        },
+         //更新个人资料
+         getUserUp:function(obj,callback){
+             $.post("/api/teacher/modify",obj,function (x) {
+                if (x.code != 200) {
+                    console.log(x.msg);
+                    return;
+                };
+                if (typeof callback == "function") {
+                    callback(x.msg);
+                };
+            });
+        },
     }
 })
