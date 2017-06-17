@@ -1,3 +1,9 @@
+/*
+ * @Author: leon.yan 
+ * @Date: 2017-06-18 00:19:41 
+ * @Last Modified by:   leon.yan 
+ * @Last Modified time: 2017-06-18 00:19:41 
+ */
 require.config({
     baseUrl: "./js",
     paths: {
@@ -12,7 +18,8 @@ require.config({
         bsTimeJs: "assets/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min",
         bsTimelang: "assets/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN",
         ueditAll:"lib/utf8/ueditor.all.min",
-        ueditCfg:"lib/utf8/ueditor.config"
+        ueditCfg:"lib/utf8/ueditor.config",
+        eChart:"lib/echarts"
     },
     shim: {
         log: {
@@ -30,7 +37,7 @@ require.config({
 
     },
 });
-require(["bsJs", "bsTimeJs", "bsTimelang", "text!tels/ChartManageTel.html", "tmp", "classCategory/list", "classManage/classList", "classManage/classEdit", "classManage/classChange", "classManage/classAdd/classCreate", "teacherManage/teacherList", "common/userCenter","common/API", "common/load", "jqCheck", "jqLogOut"], function (a, b, c, ChartManageTel, template, list, classManageList, classManageEdit, classManageChange, classCreate, teacherList,userCenter, API, load) {
+require(["bsJs", "bsTimeJs", "bsTimelang", "text!tels/ChartManageTel.html", "tmp", "classCategory/list", "classManage/classList", "classManage/classEdit", "classManage/classChange", "classManage/classAdd/classCreate", "teacherManage/teacherList", "common/userCenter","chartShow/chartShow","common/API", "common/load", "jqCheck", "jqLogOut"], function (a, b, c, ChartManageTel, template, list, classManageList, classManageEdit, classManageChange, classCreate, teacherList,userCenter, chartShow,API, load) {
     var currentTime;
     var durationTime = 1001;
     // $.ajaxSetup({
@@ -80,7 +87,7 @@ require(["bsJs", "bsTimeJs", "bsTimelang", "text!tels/ChartManageTel.html", "tmp
     $("#btnChartManage").on("click", function () {
         $(".showPart").empty();
         $(this).siblings().removeClass("active").end().addClass("active");
-        $(".showPart").append(ChartManageTel);
+        chartShow(API, template);
     });
 
 
