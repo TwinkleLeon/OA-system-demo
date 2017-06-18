@@ -1,6 +1,4 @@
 # OA-system-demo
-> 虚拟主机独立环境域名为bxg.com
+> 使用了bootstrap框架，使用了require模块化开发
 ---
 > 接口文档地址为:[doc.botue.com/#1040101](doc.botue.com/#1040101)
----
-> 使用了require模块化开发
